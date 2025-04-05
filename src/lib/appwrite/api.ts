@@ -384,11 +384,11 @@ export async function updateProject(project: UpdateProject){
 
 export async function updateProfile(profile: iProfileUpdate){
     try {
-        const uploadedFile = await uploadFile(profile.profileImage[0])
+        const uploadedFile = await uploadProfilePricture(profile.profileImage[0])
         if(!uploadedFile) throw new Error("File not uploaded")
-        const fileUrl = await getFilePreview(uploadedFile.$id)
+        const fileUrl = await getFilePreviewOfAvater(uploadedFile.$id)
         if(!fileUrl){
-            await deleFile(uploadedFile.$id)
+            await deleteAvater(uploadedFile.$id)
            throw new Error
         }
             const updatedProfile = await databases.updateDocument(

@@ -58,7 +58,7 @@ const LogIn = () => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input  {...field} />
+                <Input type="email" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -71,7 +71,7 @@ const LogIn = () => {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input  {...field} />
+                <Input type="password" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
